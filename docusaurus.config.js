@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Vortex Docs',
   tagline: 'Documentation for Vortex project',
-  url: 'https://d0si.github.io',
+  url: 'https://docs.vortex.d0.si',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'd0si',
@@ -15,15 +15,15 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/doc1',
+          to: 'docs/getting-started/introduction',
           activeBasePath: 'docs',
-          label: 'Docs',
+          label: 'Documenataion',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        /*{to: 'blog', label: 'Blog', position: 'left'},*/
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://github.com/d0si/vortex',
+          label: 'GitHub/d0si/vortex',
           position: 'right',
         },
       ],
@@ -31,7 +31,7 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        {
+        /*{
           title: 'Docs',
           items: [
             {
@@ -43,8 +43,8 @@ module.exports = {
               to: 'docs/doc2',
             },
           ],
-        },
-        {
+        },*/
+        /*{
           title: 'Community',
           items: [
             {
@@ -56,8 +56,8 @@ module.exports = {
               href: 'https://discordapp.com/invite/docusaurus',
             },
           ],
-        },
-        {
+        },*/
+        /*{
           title: 'Social',
           items: [
             {
@@ -73,9 +73,9 @@ module.exports = {
               href: 'https://twitter.com/docusaurus',
             },
           ],
-        },
+        },*/
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Delta Zero. Built with Docusaurus.`,
     },
   },
   presets: [
@@ -85,7 +85,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/d0si/vortex-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
