@@ -1,14 +1,14 @@
 module.exports = {
-  title: 'Vortex Docs',
-  tagline: 'Documentation for Vortex project',
-  url: 'https://docs.vortex.d0.si',
+  title: 'Vortex Framework',
+  tagline: 'Vortex Framework project page',
+  url: 'https://vortex.d0.si',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'd0si',
   projectName: 'vortex-docs',
   themeConfig: {
     navbar: {
-      title: 'Vortex Docs',
+      title: 'Vortex Framework',
       logo: {
         alt: 'Vortex Logo',
         src: 'img/vortex-logo-white.svg',
@@ -17,7 +17,7 @@ module.exports = {
         {
           to: 'docs/getting-started/introduction',
           activeBasePath: 'docs',
-          label: 'Documenataion',
+          label: 'Documenatation',
           position: 'left',
         },
         {

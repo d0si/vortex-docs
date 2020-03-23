@@ -1,6 +1,7 @@
 # Vortex Framework Documentation
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+Visit [vortex.d0.si](https://vortex.d0.si) to see live version of this site.
 
 ### Installation
 
