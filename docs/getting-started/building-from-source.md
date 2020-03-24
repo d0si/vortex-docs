@@ -50,3 +50,11 @@ Optional dependencies:
 - **cpp_redis** and **tacopie**
 - **cryptopp**
 - **duktape**
+
+Use the CMake support in Visual Studio to open project and wait until it is configured. If you have installed any optional dependencies you can enable them in `Project/CMake Settings for VortexProject` and search CMake variables for things that start with `VORTEX_ENABLE_FEATURE_...`.
+
+To build just use `Build/Build All` or `Ctrl+Shift+B`.
+
+Then copy `server_config.json` file from samples folder into the same folder as the built binary (build/bin) and edit it to your needs. See [Server Config file](getting-started/server-config.md) for more info.
+
+When all of that is ready select the `Vortex.exe` as debug target and start it.
