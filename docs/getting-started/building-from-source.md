@@ -55,6 +55,6 @@ Use the CMake support in Visual Studio to open project and wait until it is conf
 
 To build just use `Build/Build All` or `Ctrl+Shift+B`.
 
-Then copy `server_config.json` file from samples folder into the same folder as the built binary (build/bin) and edit it to your needs. See [Server Config file](getting-started/server-config.md) for more info.
+Then copy `server_config.json` file from samples folder into the same folder as the built binary (build/bin) and edit it to your needs. See [Server Config file](server-config.md) for more info.
 
 When all of that is ready select the `Vortex.exe` as debug target and start it.
