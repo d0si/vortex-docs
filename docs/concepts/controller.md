@@ -6,7 +6,7 @@ sidebar_label: Controller
 
 One of the base components of this system is controller. It handles requests and executes necessary actions to process it.
 
-Correct controller is selected by (Router)[concepts/router.md] which parses the request query (URL) and based on routing rules sets the search value. Controller is then searched by its router parsed name, method (GET, POST,...) and application id.
+Correct controller is selected by [Router](concepts/router.md) which parses the request query (URL) and based on routing rules sets the search value. Controller is then searched by its router parsed name, method (GET, POST,...) and application id.
 
 Example of controller object:
 ```json
