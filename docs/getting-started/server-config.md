@@ -122,7 +122,7 @@ This way the data operations inside Vortex are independent of what storage metho
 #### Storage backend config
 ```json
 ...
-{
+"config": {
   "Mongo": {
     ...
   },
@@ -138,7 +138,7 @@ Config object contains specific backend configs. For each backend its full name 
 
 ##### Mongo backend config options
 ```json
-{
+"Mongo": {
     "enabled": true,
     "username": "vortex_admin_user",
     "password": "vortex_secure_password",
@@ -160,7 +160,7 @@ Config object contains specific backend configs. For each backend its full name 
 
 ##### Filesystem backend config options
 ```json
-{
+"Filesystem": {
   "root_path": "../../../../samples",
   "cache_enabled": true,
   "cache_expiry": 120,
@@ -172,3 +172,74 @@ Config object contains specific backend configs. For each backend its full name 
 - `cache_enabled` *(optional, default=false)*
 - `cache_expiry` *(optional, default=60)*
 - `in_memory_only` *(optional, default=false)*
+
+### Cache object
+```json
+...
+"cache": {
+  "enabled": true,
+  "default_backend": "MemoryCache",
+  "config": {
+    "MemoryCache": {
+      ...
+    },
+    ...
+  }
+},
+...
+```
+
+`cache` is used for configuration of Vortex caching system. Just like with storage, caching is done through common interface backends. You can select default one, disable whole system globally or configure each backend to your own settings.
+
+##### Available options (cache)
+- `enabled` *(optional, default=false)*
+  - Enables the caching subsystem, please note that if it is disabled other configuration options may not work (setting default_backend will fail if it does not exist)
+- `default_backend` *(optional, default=MemoryCache)*
+  - Sets the default backend that is primarily used if no specific backend name is specified in requests. If backend is not loaded the program will throw an error and exit.
+
+#### Cache backend config
+```json
+"config": {
+  "MemoryCache": {
+    ...
+  },
+  "Redis": {
+    ...
+  },
+  "DummyCache": {
+    ...
+  },
+  ...
+}
+```
+
+Config object contains specific backend configs. For each backend its full name is used as key.
+
+##### MemoryCache backend options
+```json
+"MemoryCache": {
+  "enabled": true
+}
+```
+
+- `enabled` *(optional, default=false)*
+
+##### Redis backend options
+```json
+"Redis": {
+  "enabled": true,
+  "address": "redisserver",
+  "port": 9876
+}
+```
+
+- `enabled` *(optional, default=false)*
+- `address` *(optional, default=127.0.0.1)*
+- `port` *(optional, default=6379)*
+
+##### DummyCache backend options
+```json
+"DummyCache": {}
+```
+
+This backend does not use any specific options. Its only purpose is to emulate caching backend that doesn't do anything.
