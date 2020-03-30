@@ -68,7 +68,7 @@ The `contents` value is string that is about to be parsed by view parsing engine
 #### `set_page(string page_name)`
 - Finds and sets the page with `page_name` from application storage
 
-#### `parse_page()`
+#### `parse_page(): string`
 - Parses page contents and returns rendered page. You need to echo this into the location you want your page to be rendered.
 
 #### `finish()`
